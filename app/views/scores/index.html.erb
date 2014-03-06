@@ -6,8 +6,6 @@
         <td>Match</td>
         <td>Team-1</td>
         <td>Team-2</td>
-        <td>Team1-Score</td>
-        <td>Team2-Score</td>
         <td>Venue</td>
         <td>Score Card</td>
       </tr>
@@ -17,10 +15,8 @@
         <tr>
           <td><%= score.id %></td>
           <td><%= score.name %></td>
-          <td><%= score.team1 %></td>
-          <td><%= score.team2 %></td>
-          <td><%= score.scoreteam1 %></td>
-          <td><%= score.scoreteam2 %></td>
+          <td><%= Team.find(score.team1).name %></td>
+          <td><%= Team.find(score.team2).name %></td>
           <td><%= score.venue %></td>
           <td><%= link_to "Scorecard", score %></td>
         </tr>  

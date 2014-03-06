@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140302071958) do
+ActiveRecord::Schema.define(:version => 20140306073522) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -51,10 +51,14 @@ ActiveRecord::Schema.define(:version => 20140302071958) do
     t.string   "name"
     t.integer  "runs"
     t.integer  "balls"
+    t.integer  "ones"
+    t.integer  "twos"
+    t.integer  "threes"
     t.integer  "fours"
     t.integer  "sixes"
     t.boolean  "status"
     t.string   "bowler"
+    t.float    "strikerate"
     t.integer  "score_id"
     t.integer  "team_id"
     t.datetime "created_at", :null => false
@@ -67,7 +71,9 @@ ActiveRecord::Schema.define(:version => 20140302071958) do
   create_table "bowlers", :force => true do |t|
     t.integer  "innings"
     t.string   "name"
+    t.integer  "runs"
     t.float    "overs"
+    t.float    "avg"
     t.integer  "wides"
     t.integer  "noball"
     t.integer  "maidens"
@@ -85,13 +91,38 @@ ActiveRecord::Schema.define(:version => 20140302071958) do
     t.string   "name"
     t.string   "team1"
     t.string   "team2"
+    t.string   "team1score"
+    t.string   "team2score"
     t.string   "toss"
     t.string   "venue"
     t.date     "date"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "scoreteam1"
-    t.string   "scoreteam2"
+    t.string   "guest1"
+    t.string   "guest2"
+    t.string   "guest3"
+    t.string   "guest4"
+    t.string   "guest5"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "photo1_file_name"
+    t.string   "photo1_content_type"
+    t.integer  "photo1_file_size"
+    t.datetime "photo1_updated_at"
+    t.string   "photo2_file_name"
+    t.string   "photo2_content_type"
+    t.integer  "photo2_file_size"
+    t.datetime "photo2_updated_at"
+    t.string   "photo3_file_name"
+    t.string   "photo3_content_type"
+    t.integer  "photo3_file_size"
+    t.datetime "photo3_updated_at"
+    t.string   "photo4_file_name"
+    t.string   "photo4_content_type"
+    t.integer  "photo4_file_size"
+    t.datetime "photo4_updated_at"
+    t.string   "photo5_file_name"
+    t.string   "photo5_content_type"
+    t.integer  "photo5_file_size"
+    t.datetime "photo5_updated_at"
   end
 
   create_table "teams", :force => true do |t|

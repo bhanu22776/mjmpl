@@ -3,7 +3,9 @@ class CreateBowlers < ActiveRecord::Migration
     create_table :bowlers do |t|
       t.integer :innings
       t.string :name
+      t.integer :runs
       t.float :overs
+      t.float :avg
       t.integer :wides
       t.integer :noball
       t.integer :maidens

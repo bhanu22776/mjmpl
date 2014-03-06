@@ -4,11 +4,15 @@ class CreateBattings < ActiveRecord::Migration
       t.integer :innings
       t.string :name
       t.integer :runs
-      t.integer :balls
+      t.integer :balls      
+      t.integer :ones
+      t.integer :twos
+      t.integer :threes
       t.integer :fours
       t.integer :sixes
       t.boolean :status
       t.string :bowler
+      t.float :strikerate
       t.references :score
       t.references :team
 
